@@ -12,58 +12,64 @@
       padding: 0;
       font-family: 'Montserrat', sans-serif;
       text-transform: uppercase;
-      background: url('https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1632915548435-1b92c74a87e0?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
       background-size: cover;
       color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-    }
-
-    .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 120px;
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     h1 {
-      font-size: 48px;
-      margin-bottom: 40px;
-      text-shadow: 2px 2px 5px black;
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+      text-align: center;
+    }
+
+    .subheading {
+      font-size: 24px;
+      margin-bottom: 30px;
+      color: #FFD700;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
     }
 
     .button-container {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      width: 100%;
+      max-width: 320px;
     }
 
     .btn {
-      background-color: #ff0000;
+      background: linear-gradient(135deg, #ff004c, #ff9900);
       border: none;
-      padding: 15px 30px;
-      font-size: 20px;
+      padding: 16px 24px;
+      font-size: 18px;
       font-weight: bold;
-      border-radius: 8px;
+      border-radius: 12px;
       cursor: pointer;
       text-decoration: none;
       color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      transition: transform 0.2s ease, background-color 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
     }
 
     .btn:hover {
       transform: scale(1.05);
-      background-color: #cc0000;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
     }
   </style>
 </head>
 <body>
-  <img src="https://i.ibb.co/r7NwhCz/ludos-logo.png" alt="LUDOS Logo" class="logo">
   <h1>Переходи сейчас</h1>
+  <div class="subheading">⚡ LUDOS ⚡</div>
   <div class="button-container">
     <a class="btn" href="https://t.me/yourtelegram" target="_blank">Ссылка на мой ТГ</a>
     <a class="btn" href="#">Играть по сигналам от бота</a>
