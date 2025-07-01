@@ -91,8 +91,30 @@
     }
     .btn3 {
       position: relative;
-      display: block;
       white-space: nowrap;
+      display: inline-block;
+      padding: 15px 30px;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      background-color: #007bff;
+      border-radius: 8px;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .btn3::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      animation: pulse 1.5s infinite ease-out;
+      z-index: -1;
     }
     a p {
       position: absolute;
