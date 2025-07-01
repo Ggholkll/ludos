@@ -91,7 +91,6 @@
     }
     .btn3 {
       position: relative;
-      white-space: nowrap;
       display: inline-block;
       padding: 15px 30px;
       color: white;
@@ -100,7 +99,7 @@
       background-color: #007bff;
       border-radius: 8px;
       overflow: hidden;
-      z-index: 0;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .btn3::before {
@@ -114,14 +113,36 @@
       border-radius: 50%;
       transform: translate(-50%, -50%) scale(0);
       animation: pulse 1.5s infinite ease-out;
-      z-index: -1;
+      pointer-events: none;
     }
+
+    @keyframes pulse {
+      0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0.6;
+      }
+      70% {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+      }
+    }
+    
     a p {
       position: absolute;
       top:45%;
       left: 50%;
       transform: translate(-50%, 0%);
       font-size: 12px;
+    }
+
+    .btn3-text {
+      display: block;
+      font-size: 12px;
+      margin-top: 5px;
     }
 
     .btn:hover {
@@ -136,7 +157,7 @@
   <div class="button-container">
     <a class="btn btn1" href="https://t.me/getyourmilion" target="_blank"> 🎁 ТГ КАНАЛ С БОНУСАМИ <img src="./free-icon-telegram-5968804.png" alt="tg"/></a>
     <a class="btn btn2" href="https://t.me/signalminessuper_bot"> Играть с секретным софтом </a>
-    <a class="btn btn3" href="https://1wywg.com/v3/5267/fortune-wheel-aviamasters&p=dnbt">AVIA MASTERS </b> <p> ЖМИ ИГРАТЬ</p></a>
+    <a class="btn btn3" href="https://1wywg.com/v3/5267/fortune-wheel-aviamasters&p=dnbt">AVIA MASTERS </b> <p class="btn3-text"> ЖМИ ИГРАТЬ</p></a>
   </div>
 </body>
 </html>
