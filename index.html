@@ -7,6 +7,10 @@
   <title>Переходи сейчас</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -15,27 +19,31 @@
       background: url('https://images.unsplash.com/photo-1632915548435-1b92c74a87e0?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
       background-size: cover;
       color: white;
+      min-height: 100vh;
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
       padding: 20px;
-      box-sizing: border-box;
+    }
+
+    .ludos-label {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 20px;
+      color: #FFD700;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
     }
 
     h1 {
       font-size: 36px;
+      margin-top: 60px;
       margin-bottom: 20px;
       text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
       text-align: center;
-    }
-
-    .subheading {
-      font-size: 24px;
-      margin-bottom: 30px;
-      color: #FFD700;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
     }
 
     .button-container {
@@ -68,8 +76,8 @@
   </style>
 </head>
 <body>
+  <div class="ludos-label">⚡ LUDOS ⚡</div>
   <h1>Переходи сейчас</h1>
-  <div class="subheading">⚡ LUDOS ⚡</div>
   <div class="button-container">
     <a class="btn" href="https://t.me/yourtelegram" target="_blank">Ссылка на мой ТГ</a>
     <a class="btn" href="#">Играть по сигналам от бота</a>
